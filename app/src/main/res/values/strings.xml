@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">CMAttendace</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="mobile_number">मोबाइल नंबर</string>
+    <string name="signup_title">सी.एम का पंजीकरण</string>
+    <string name="submit">SUBMIT</string>
+    <string name="sign_Q3">पंचायत का नाम</string>
+    <string name="sign_Q4">गांव का नाम</string>
+    <string name="sign_Q5">ग्राम संगठन का नाम</string>
+    <string name="sign_Q6">सी.एम का नाम</string>
+    <string name="otp">OTP  दर्ज  करें</string>
+    <string-array name="district">
+        <item> जिला का नाम </item>
+        <item> नालंदा </item>
+        <item> नवादा </item>
+    </string-array>
+    <string-array name="block">
+        <item> ब्लॉक का नाम </item>
+    </string-array>
+    <string-array name="dnalanda">
+        <item>नालंदा जिला के ब्लॉक</item>
+        <item>बिहारशरीफ</item>
+        <item>चंडी</item>
+        <item>राजगीर</item>
+        <item>हरनौत</item>
+        <item>हिल्सा</item>
+    </string-array>
+
+    <string-array name="dnawada">
+        <item>नवादा जिला के ब्लॉक</item>
+        <item>गोविंदपुर</item>
+        <item>नवादा सदर</item>
+        <item>नरहट</item>
+        <item>रजौली</item>
+        <item>रोह</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="attendance">उपस्तिथि</string>
+    <string name="add">समूह</string>
+    <string name="navratna">नवरत्न</string>
+    <string name="sync">डेटा भेजें</string>
+    <string name="add_shg">समूह जोड़े</string>
+    <string name="add_member">समूह सदस्य जोड़े</string>
+    <string name="login">लॉग इन</string>
+    <string name="register">रजिस्टर</string>
+    <string name="notification">नोटीफीकेशन</string>
+    <string name="pci_logo">PCI LOGO</string>
+    <string name="shgRegisterTitle">समूह रजिस्टर</string>
+    <string name="RMY">रिपोर्ट का महिना और वर्ष</string>
+    <string name="regShgSIns">Q7. वर्तमान महीने में स्वास्थ्य, पोषण एवं स्वच्छता (HNS) से सम्बंधित कौन सा सेशन रोल आउट हुआ|</string>
+    <string name="regShgQ8">Q8. स्वस्थ्य, पोषण एवं स्वच्छता (HNS) सेशन रोल आउट के दौरान उपस्तिथ महिलाओं की संख्या</string>
+    <string name="regShgQ8A">समूह सदस्य</string>
+    <string name="regShgQ8B">अन्य सदस्य</string>
+    <string name="regShgQ9">Q9 इस महीने वैसे समूह के घरों की संख्या जहाँ गर्भवती एवं धात्री महिलाऐं हैं</string>
+    <string name="regShgQ9A">गर्भवती (तीसरी तिमाही)</string>
+    <string name="regShgQ9B">धात्री जिनके बच्चे की उम्र 0-5 माह</string>
+    <string name="regShgQ9C">धात्री जिनके बच्चे की उम्र 6-11 माह</string>
+    <string name="regShgQ10">Q10. समूह के क्षेत्र मैं पिछले महीने आंगनबाड़ी केंद्र पर अन्नप्राशन दिवस का आयोजन हुआ</string>
+    <string name="regShgQ11">Q11. पिछले महीने कुल कितने बच्चों (6-8 माह) ने अन्नप्राशन दिवस में भाग लिया</string>
+    <string name="regShgQ12">Q12. समूह के कुल सदस्यों की संख्या जिनके घर में पोषण बगीचा (किचन/न्यूट्री गार्डन)</string>
+    <string name="regShgQ13">Q13. समूह के कुल सदस्यों की संख्या जिनके घर में पक्का शोचालय है</string>
+    <string name="regShgQ14">Q14. पिछले महीने विडियो शो दिखाया गया</string>
+    <string name="regShgQ15">Q15. पिछले महीने विडियो शो देखने वाले सदस्यों की संख्या</string>
+    <string name="regShgQ16">Q16. पिछले महीने दिखाए गये विडियो शो का विषय</string>
+    <string name="regShgQ17">Q17. पिछले महीने नवरत्न पर चर्चा हुई</string>
+    <string name="serial">क्रम</string>
+    <string name="memberName">सदस्य का नाम</string>
+    <string name="villageName">गांव</string>
+    <string name="mobileNumber">मोबाइल नं०</string>
+    <string name="shgDetailName">समूह के नाम</string>
+    <string name="shgDetailNumber">संख्या</string>
+    <string name="shgDetailTotal">कुल संख्या</string>
+
+    <string-array name="YN">
+        <item>चुनाव करें </item>
+        <item> 1. हाँ </item>
+        <item> 2. नहीं </item>
+    </string-array>
+</resources>

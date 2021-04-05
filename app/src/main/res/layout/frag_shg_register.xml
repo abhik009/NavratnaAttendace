@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShgRegisterFrag">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_margin="8dp"
+            android:background="#F0AD4E"
+            android:drawableStart="@drawable/ic_book"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal"
+            android:paddingStart="16dp"
+            android:text="@string/shgRegisterTitle"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="#FFF"
+            app:drawableTint="#FFF" />
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/regShgName"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:spinnerMode="dialog"
+                android:textAlignment="center" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/regShgVillage"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:spinnerMode="dialog"
+                android:textAlignment="center" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/repMonthYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:text="@string/RMY"
+                android:textColor="#000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center_vertical"
+                    android:text="Q6 समूह में कुल सदस्यों की संख्या"
+                    android:textColor="#000" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regShgQ6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:columnCount="5"
+                android:gravity="center"
+                android:isScrollContainer="true"
+                android:rowCount="5"
+                android:useDefaultMargins="true">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="5"
+                    android:backgroundTint="#E0E0E0"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/regShgSIns"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/register_shg_M1"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:backgroundTint="#E0E0E0"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="M1"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS1"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:text="S1"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS2"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:text="S2"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS3"
+                    android:layout_row="1"
+                    android:layout_column="3"
+                    android:text="S3"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS4"
+                    android:layout_row="1"
+                    android:layout_column="4"
+                    android:text="S4"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/register_shg_M2"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:backgroundTint="#E0E0E0"
+                    android:clickable="false"
+                    android:text="M2"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS5"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:text="S5"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS6"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:text="S6"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS7"
+                    android:layout_row="2"
+                    android:layout_column="3"
+                    android:text="S7"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/register_shg_M3"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:backgroundTint="#E0E0E0"
+                    android:clickable="false"
+                    android:text="M3"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS8"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:text="S8"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS9"
+                    android:layout_row="3"
+                    android:layout_column="2"
+                    android:text="S9"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS10"
+                    android:layout_row="3"
+                    android:layout_column="3"
+                    android:text="S10"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS11"
+                    android:layout_row="3"
+                    android:layout_column="4"
+                    android:text="S11"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/register_shg_M4"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:backgroundTint="#E0E0E0"
+                    android:clickable="false"
+                    android:text="M4"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS12"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:text="S12"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS13"
+                    android:layout_row="4"
+                    android:layout_column="2"
+                    android:text="S13"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS14"
+                    android:layout_row="4"
+                    android:layout_column="3"
+                    android:text="S14"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/regShgS15"
+                    android:layout_row="4"
+                    android:layout_column="4"
+                    android:text="S15"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E0E0E0"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/regShgQ8"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/regShgQ8A"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFF"
+                            android:gravity="center"
+                            android:hint="@string/regShgQ8A"
+                            android:inputType="number"
+                            android:maxLength="3" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/regShgQ8B"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFF"
+                            android:gravity="center"
+                            android:hint="@string/regShgQ8B"
+                            android:inputType="number"
+                            android:maxLength="3" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E0E0E0"
+                    android:focusable="false"
+                    android:padding="4dp"
+                    android:text="@string/regShgQ9"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_margin="4dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regShgQ9A"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF"
+                        android:hint="@string/regShgQ9A"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingLeft="8dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_margin="4dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regShgQ9B"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF"
+                        android:hint="@string/regShgQ9B"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingLeft="8dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_margin="4dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regShgQ9C"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF"
+                        android:hint="@string/regShgQ9C"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingLeft="8dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:gravity="left"
+                    android:focusable="false"
+                    android:text="@string/regShgQ10"
+                    android:textColor="#000" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/regShgQ10"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".6"
+                    android:entries="@array/YN"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="left"
+                    android:focusable="false"
+                    android:text="@string/regShgQ11"
+                    android:textColor="#000" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regShgQ11"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="left"
+                    android:focusable="false"
+                    android:text="@string/regShgQ12"
+                    android:textColor="#000" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regShgQ12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="left"
+                    android:focusable="false"
+                    android:text="@string/regShgQ13"
+                    android:textColor="#000" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regShgQ13"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.4"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:text="@string/regShgQ14"
+                    android:textColor="#000"
+                    android:textDirection="ltr" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/regShgQ14"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".6"
+                    android:entries="@array/YN"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:text="@string/regShgQ15"
+                    android:textColor="#000"
+                    android:textDirection="ltr" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regShgQ15"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:text="@string/regShgQ16"
+                    android:textColor="#000"
+                    android:textDirection="ltr" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regShgQ16"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_rectangle"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.4"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:text="@string/regShgQ17"
+                    android:textColor="#000"
+                    android:textDirection="ltr" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/regShgQ17"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".6"
+                    android:entries="@array/YN"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

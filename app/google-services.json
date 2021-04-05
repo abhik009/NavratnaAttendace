@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "813296154846",
+    "firebase_url": "https://navratnaattendace.firebaseio.com",
+    "project_id": "navratnaattendace",
+    "storage_bucket": "navratnaattendace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813296154846:android:367214a75c21c4c86eea4f",
+        "android_client_info": {
+          "package_name": "com.pci.navratnaattendace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813296154846-luomn6n3aege1ms5gkish5db4cvr2o7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pci.navratnaattendace",
+            "certificate_hash": "0ceec26afcab2478942696d30c1f43737e5bae1d"
+          }
+        },
+        {
+          "client_id": "813296154846-rs6csn7l8tbgk4nos1uarflv5s91v5lq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pci.navratnaattendace",
+            "certificate_hash": "c5125f58b445cbda55d05bf77cfc49fec578fa0d"
+          }
+        },
+        {
+          "client_id": "813296154846-pi6rak8jmekp0t050rd4h6r77dvkudpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl9mHvACJC3IE5Qrx2efG0GO_uoOpu5jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813296154846-pi6rak8jmekp0t050rd4h6r77dvkudpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

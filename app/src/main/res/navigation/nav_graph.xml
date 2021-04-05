@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFrag">
+
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.pci.navratnaattendace.LoginFrag"
+        android:label="frag_login"
+        tools:layout="@layout/frag_login" >
+        <action
+            android:id="@+id/action_loginFrag_to_signupFrag"
+            app:destination="@id/signupFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFrag"
+        android:name="com.pci.navratnaattendace.SignupFrag"
+        android:label="frag_signup"
+        tools:layout="@layout/frag_signup" >
+        <action
+            android:id="@+id/action_signupFrag_to_landingFrag"
+            app:destination="@id/landingFrag"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/landingFrag"
+        android:name="com.pci.navratnaattendace.LandingFrag"
+        android:label="fragment_landing"
+        tools:layout="@layout/frag_landing" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuFrag"
+        android:name="com.pci.navratnaattendace.MenuFrag"
+        android:label="frag_menu"
+        tools:layout="@layout/frag_menu" >
+        <action
+            android:id="@+id/action_menuFrag_to_attendanceFrag"
+            app:destination="@id/attendanceFrag"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFrag_to_shgRegisterFrag"
+            app:destination="@id/shgRegisterFrag"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit" />
+        <action
+            android:id="@+id/action_menuFrag_to_shgdetailFrag"
+            app:destination="@id/shgdetailFrag" />
+        <action
+            android:id="@+id/action_menuFrag_to_navratnaFrag"
+            app:destination="@id/navratnaFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceFrag"
+        android:name="com.pci.navratnaattendace.AttendanceFrag"
+        android:label="frag_attendance"
+        tools:layout="@layout/frag_attendance" />
+    <fragment
+        android:id="@+id/shgRegisterFrag"
+        android:name="com.pci.navratnaattendace.ShgRegisterFrag"
+        android:label="frag_shg_register"
+        tools:layout="@layout/frag_shg_register" />
+    <fragment
+        android:id="@+id/shgdetailFrag"
+        android:name="com.pci.navratnaattendace.ShgdetailFrag"
+        android:label="add_shg"
+        tools:layout="@layout/add_shg" >
+        <action
+            android:id="@+id/action_shgdetailFrag_to_memberFrag"
+            app:destination="@id/memberFrag" />
+        <argument
+            android:name="shgDetails"
+            app:argType="com.pci.navratnaattendace.db.Shg" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberFrag"
+        android:name="com.pci.navratnaattendace.MemberFrag"
+        android:label="frag_member"
+        tools:layout="@layout/frag_member" />
+    <fragment
+        android:id="@+id/navratnaFrag"
+        android:name="com.pci.navratnaattendace.NavratnaFrag"
+        android:label="navratna_frag"
+        tools:layout="@layout/navratna_frag" />
+</navigation>

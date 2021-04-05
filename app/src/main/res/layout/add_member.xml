@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/addMemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="सदस्य जोड़े"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/memVillage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="गाँव का नाम"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/memName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="सदस्या का नाम"
+                android:inputType="textAutoComplete"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/memAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="सदस्या की उम्र"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या सदस्या पढ़ और लिख सकती हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="आपके घर में 0-6 माह तक उम्र के कितने बच्चे हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="इन बच्चों में कितने बच्चे केवल और केवल माँ का दूध पीते हैं "
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="आपके घर में 6-23 माह के कितने बच्चे हैं"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="इन 6-23 माह तक उम्र के बच्चों में से कितने बच्चों ने पिचले 24 घंटे के अन्दर माँ के दूध के साथ-साथ 7 में से 4 खाद्य समूह से बना खानाध्पुरक आहार खाया है?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:visibility="gone"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="आपके घर में कितने 2 वर्ष तक के छोटे बच्चे हैं"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="इन 2 वर्ष उम्र तक के छोटे बच्चों में कितने बच्चों को समय पर जच्चा बच्चा कार्ड के अनुसार टिका लगाया जा रहा है ?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:visibility="gone"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या आपके घर में पोषण बगीचा है?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या आप इस पोषण बगीचा में उगाये गए फल और सब्जियों को रोज खा राही हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="आपके घर में कितनी गर्भवती एवं धात्री महिलाएँ है?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="इनमें से कितनी महिलाओं ने पिचले 24 घंटो के अन्दर 10 में से कम 5 खाद्य समूह से बना खाना खाया है?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:visibility="gone"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="आपके घर में 49 वर्ष तक की कितनी शादी शुदा महिलाएं हैं ?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="तो इनमें से कितनी महिलाएं परिवार नियोजन के किसी भी साधन को इस्तेमाल कर रही हैं"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/optionMemQ13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="number"
+                android:maxLength="2"
+                android:visibility="gone"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या आपके घर में 5 वर्ष या उसे कम उम्र के बच्चे हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या आपके घर में दो पैकेट ओ.आर.एस उपलब्ध हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या आपके घर के सदस्य सही समय पर साबुन से हाथ धोते हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या आपके घर में व्यक्तिगत शौचालय हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMemQ18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="क्या आपके घर के सभी सदस्य शौचालय का इस्तेमाल करते हैं?"
+                android:textAlignment="textStart"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/optionMemQ18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/YN" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/memMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="मोबाइल नंबर"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</ScrollView>
